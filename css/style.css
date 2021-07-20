@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+
+*{
+    font-family: Montserrat;
+    margin: 0;
+    outline: none ;
+    box-sizing: border-box !important;
+    padding: 0;
+}
+
+/* body {
+    min-width: 500px;
+} */
+
+.movie-list-tile {
+    font-weight: bold;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    margin: 0px;
+}
+
+.container {
+    padding: 70px 0px 0px 0px !important;
+    max-width: none !important;
+}
+
+.featured-content {
+    height: 50vh;
+    padding: 50px;
+}
+
+.featured-title {
+    width: 200px;
+}
+
+.featured-desc {
+    width: 500px;
+    color: grey;
+    margin: 50px 0;
+}
+
+.featured-button {
+    background-color:red;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 140px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.featured-button:hover {
+    background-color:white;
+    color: black
+
+}
+
+.movie-list-container {
+    position: relative;
+    padding: 10px 50px 0px 50px;
+    background-color: #151515;
+}
+
+.movie-list {
+    display: flex;
+    align-items: center;
+    height: 210px;
+    transform: translateX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.movie-list-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin-right: 50px;
+}
+
+.movie-list-items {
+    margin-right: 30px;
+    position: relative;
+}
+
+.movie-list-items:hover .movie-list-item-img{
+    transform: scale(1.02);
+    opacity: 0.2;
+}
+.movie-list-item-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out
+}
+
+    
+.movie-list-info {
+    background: linear-gradient( rgba(255,0,0,0), rgb(155, 19, 19));; 
+    color: black;
+    padding: 10px;
+    outline: none;
+    /* cursor: pointer; */
+    position: absolute;
+    bottom: 0%;
+    opacity: 0;    
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    transform: scale(1.02);
+}
+
+.movie-list-items:hover .movie-list-info {
+    opacity: 1;
+}
+
+.movie-list-item-button {
+    background: black;
+    height: 40px;
+    width: 100%;  
+    color: white;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    border: none;
+    }
+    
+.movie-list-item-button:hover {
+    background: white;
+    color: black;
+}
+
+.movie-list-item-title {
+    overflow: hidden;
+    font-size: 21px;
+    font-weight: bold;
+    color: white;
+    transition: all 0.3s ease-in-out
+} 
+
+h1 {
+    margin-top: 50px;
+    color: white;
+}
+
+.right {
+    font-size: 150px;
+    position: absolute;
+    top: 150px;
+    right: 20px;
+    color:rgb(155, 19, 19);
+    cursor: pointer;
+}
+
+.arrow:hover {
+    color:rgb(77, 73, 73);
+}
+
+.carousel {
+    height: 650px;
+}
+
+.carousel-inner,
+.carousel-item {
+    height: 100%;
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.carousel-caption {
+    display: flex !important;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.carouselButton {
+    height: 45px;
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    background-color: red;
+    font-weight: 600;
+}
+
+.carouselButton:hover {
+    color: white;
+    background-color: black;
+}
+
+.darkoverlay{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: rgba(20, 20, 20, 0.432)
+}
+
+h1,
+h5 {
+    font-weight: 600;
+}
+
+h5 {
+    padding-bottom: 25px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+  color: white;
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 800px) {
+h1 {
+    font-weight: 600;
+    font-size: 20px;
+}
+h5 {
+    font-size: 12px;
+    font-weight: 200;
+}
+
+h2 {
+    font-size: 15px;
+}
+
+p {
+    font-size: 12px;
+}
+.movie-list-item-img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out
+}
+.movie-list-item-title,
+.movie-list-item-desc {
+    font-size: 15px;
+}
+.movie-list-tile {
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    margin: 0px;
+}
+.right {
+    font-size: 70px;
+    position: absolute;
+    top: 110px;
+    right: 8px;
+    color:rgb(155, 19, 19);
+    cursor: pointer;
+}
+.movie-list-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin-right: 10px;
+    }
+
+    .movie-list-container,
+    .footer {
+        padding: 10px 40px 10px 20px !important;
+    }
+ 
+}
+
+
+.movie-result-item-button {
+    margin-bottom: 5px;
+}
+

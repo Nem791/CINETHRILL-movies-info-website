@@ -1,0 +1,247 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    font-family: Montserrat;
+}
+.form-inline {
+    display: flex;
+    flex-direction: row;
+}
+body {
+    background: #141414;
+    position: relative;
+}
+header {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    background: #0B0B0B;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    color: #fff !important;
+}
+
+nav ul li a {
+    color: cornsilk ;
+}
+.background {
+    width: 100%;
+    height: 100%;
+}
+
+.background-image > img {
+    width: 100%;
+    height: 800px;
+    position: absolute;
+    z-index: -1;
+}
+.background-image {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 800px;
+    background: linear-gradient(to top, rgb(20,20,20) 30%, rgba(51, 51, 51, 0.329) 75%);
+}
+.background-content {
+    position: relative;
+    padding-top: 150px;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 100%;
+}
+
+.block1 h1 {
+    color: white;
+    font-weight: 900;
+}
+
+.block1 p {
+    color: white;
+    width: 100%;
+}
+
+.star {
+    margin: 30px 0px;
+    color: yellow;
+}
+
+
+
+.block1 span:last-child {
+    color: white;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.block1 button {
+    padding: 10px 50px;
+    color: white;
+    border-radius: 30px;
+    border: 1px solid white;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+
+.block1 button:hover {
+    background-color: deepskyblue;
+    transition: 0.5s;
+}
+
+.block2 {
+    margin-left: auto;
+    width: 500px;
+}
+
+.block2 > button:hover {
+    background: lightyellow;
+}
+
+.block2 span {
+    font-size: 2em;
+    margin: 20px 40px;
+    padding: 10px 40px;
+    color: white;
+}
+
+.block2 span.active {
+    background: greenyellow;
+    border-radius: 30px;
+    color: black;
+}
+
+.block2 span:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.block2 span.active:hover {
+    background: lightgreen;
+    cursor: pointer;
+}
+
+.block2 p {
+    color: white;
+}
+
+.block2 button {
+    padding: 13px 80px;
+    border-radius: 30px;
+    background: linear-gradient(to left, #ef6776, #aa309c);
+    color: white;;
+}
+
+.text span {
+    border-radius: 100%;
+    border: 1px solid white;
+    padding: 15px;
+    font-size: 1.3em;
+    margin-left: 10px;
+}
+
+.suggestions {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    margin-left: -30px;
+    margin-right: -15px;
+    /* width: calc(100vw - (100vw - 100%)); */
+}
+
+.suggestion_list {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    transform: translateX(0);
+    transition: 1s;
+}
+.suggestion_list > .sug-item {
+    margin-right: 10px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.suggestion-title {
+    color: #fff;
+}
+
+.slick-slide img {
+    cursor: pointer;
+    width: 260px;
+    height: 100%;
+    border-radius: 7px;
+    display: block;
+}
+
+.slick-active:hover {
+    margin: 0 15px;
+    transform: scale(1.05);
+    cursor: pointer;
+
+}
+.slick-active {
+    transition: 0.5s;
+
+}
+
+.image-overlay {
+    position: absolute;
+    top: 8px;
+    width: 260px;
+    height: 90%;
+    background: linear-gradient( rgba(255,0,0,0), rgb(155, 19, 19));
+    color: white;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.image-overlay:hover {
+    opacity: 1;
+}
+
+.image-title {
+    font-size: 1.25em;
+    font-weight: bold;
+    cursor: text;
+}
+.image-plot {
+    font-size: 1em;
+    margin-top: 0.25em;
+    cursor: text;
+}
+
+
+.slide-arrow {
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.block2 {
+    flex: 1;
+}
+
+#plot {
+    color: white;
+}
+
+.film-image {
+    width: 50%;
+    height: 50%;
+}
+
+.film-image > img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
