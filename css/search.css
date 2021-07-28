@@ -1,0 +1,82 @@
+body {
+    background-color: black;
+}
+.movie_results {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+h3 {
+    color: white;
+}
+
+.movie_results {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.movie_result {
+    margin: 30px auto;
+    position: relative;
+}
+
+.movie_result:hover .movie-result-img{
+    transform: scale(1.02);
+    opacity: 0.2;
+}
+.movie-result-img {
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out
+}
+
+    
+.movie-result-info {
+    background: linear-gradient( rgba(255,0,0,0), rgb(155, 19, 19));; 
+    color: black;
+    padding: 10px;
+    outline: none;
+    /* cursor: pointer; */
+    position: absolute;
+    bottom: 0%;
+    opacity: 0;    
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    transform: scale(1.02);
+}
+
+.movie_result:hover .movie-result-info {
+    opacity: 1;
+}
+
+.movie-result-item-button {
+    background: black;
+    height: 40px;
+    width: 100%;  
+    color: white;
+    font-weight: bold;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    border: none;
+    }
+    
+.movie-result-item-button:hover {
+    background: white;
+    color: black;
+}
+
+.movie-result-item-title {
+    overflow: hidden;
+    font-size: 21px;
+    font-weight: bold;
+    color: white;
+    transition: all 0.3s ease-in-out
+} 
+
+
+
+

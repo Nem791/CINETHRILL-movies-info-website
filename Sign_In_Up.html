@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/Sign_In_Up.css">
+
+    <title>Intro</title>
+</head>
+
+<body>
+    <div class="container">
+        <form class="form__signIn" id=signin>
+            <h1 class="form form__title">Sign In</h1>
+            <div class="form__messageabc">
+                Invalid username/password combination
+            </div>
+            <div class="form__input-group">
+                <label for="form__email">Email</label>
+                <input type="email" class="form form__input-signIn" autofocus id="form__email">
+            </div>
+            <div class="form__input-group">
+                <label for="form__password">Password</label>
+                <input type="password" class="form form__input-signIn" autofocus id="form__password">
+            </div>
+            <div class="form__input-group">
+                <button type="button" class="form form__button form__button-signIn" id="form__button__submit">Sign In</button>
+            </div>
+            <div class="form__input-group">
+                <p class="form form__text">
+                    <a href="#" class="form form__linkForgot">Forgot your password</a>
+                    <a href="#" class="form linkCreateAccount">Don't have an account? Create account</a>
+                </p>
+            </div>
+        </form>
+        <form class="form form__hiden" id="createAccount">
+            <h1 class="form form__title">Create Account</h1>
+            <div class="form__input-group">
+                <label for="form_username-cretaAccount">UserName</label>
+                <input type="text" class="form form__input-signUp form__userName" autofocus id="form_username-CreateAccount">
+                <div class="form__mesageError"></div>
+            </div>
+            <div class="form__input-group">
+                <label for="form_email-cretaAccount">Email Address</label>
+                <input type="email" class="form form__input-signUp form__email" autofocus id="form_email-cretaAccount">
+                <div class="form__mesageError"></div>
+            </div>
+            <div class="form__input-group">
+                <label for="form_password-cretaAccount">Password</label>
+                <input type="password" class="form form__input-signUp form__password" autofocus id="form_password-cretaAccount">
+                <div class="form__mesageError"></div>
+            </div>
+            <div class="form__input-group">
+                <label for="form_confirmPassword-cretaAccount">Confirm Password</label>
+                <input type="password" class="form form__input-signUp" autofocus id="form_confirmPassword-cretaAccount">
+                <div class="form__mesageError"></div>
+            </div>
+            <div class="form__input-group">
+                <button type="button" class="form form__button form__button-signUp" id="form_buttonCreateAccount">Sign Up</button>
+            </div>
+            <div class="form__input-group">
+                <p class="form form__text">
+                    <a href="#" class="form linkSigninAccount">Already have an account? Sign in</a>
+                </p>
+            </div>
+        </form>
+    </div>
+    <script src="./js/Sign_In_Up.js"></script>
+</body>
+
+</html>

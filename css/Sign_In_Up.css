@@ -1,0 +1,95 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: 
+    linear-gradient(to top, #0000008f 100%, #0000008f 100%),
+    url('https://analyticsindiamag.com/wp-content/uploads/2019/05/apps.55787.9007199266246365.687a10a8-4c4a-4a47-8ec5-a95f70d8852d.jpg');
+}
+.container{
+    width: 400px;
+    max-width: 400px;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+.form{
+    display: block;
+}
+.form__message{
+    color: orange;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: none;
+}
+.form__title{
+    text-align: center;
+    color: white;
+}
+.form__input-group{
+    margin-bottom: 20px;
+}
+label{
+    padding: 10px;
+    color: #dddddd;
+}
+.form__input-signIn{
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+    background-color: #dddddd;
+    border: 1px solid #dddddd;
+    outline: none;
+}
+.form__input-signUp{
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+    background-color: #dddddd;
+    border: 1px solid #dddddd;
+    outline: none;
+}
+.form__error{
+    border-color: red;
+}
+.form__input-signUp:focus{
+    background-color: white;
+    border-color: greenyellow;
+}
+.form__mesageError{
+    padding-left: 10px;
+    padding-top: 5px;
+    color: red;
+}
+.form__button{
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 30px;
+    background-color: red;
+    color: white;
+    font-weight: 700;
+}
+.form__button:hover{
+    cursor: pointer;
+}
+.form__text{
+    text-align: center;
+    margin-top: 20px;
+}
+.form__text a{
+    text-decoration: none;
+    color: #dddddd;
+}
+.form__text a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: orange;
+}
+.form__hiden{
+    display: none;
+}
