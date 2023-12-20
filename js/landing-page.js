@@ -4,10 +4,13 @@ let leftArrow = `<i class="fas fa-chevron-circle-left slide-arrow"></i>`;
 let rightArrow = `<i class="fas fa-chevron-circle-right slide-arrow"></i>`;
 let movieAPI = "../db.json";
 
-let trailerId;
+let movieTitle;
 let reviewId;
+
 function info(n) {
-  fetch(`https://www.omdbapi.com/?i=${n}&apikey=48b12622`, {
+  const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+  const targetUrl = `http://www.omdbapi.com/?i=${n}&apikey=48b12622`;
+  fetch(proxyUrl + targetUrl, {
     method: "GET",
     mode: "cors",
     headers: { "Content-Type": "application/json" },
@@ -16,10 +19,11 @@ function info(n) {
       return response.json();
     })
     .then((data) => {
-      document.getElementById("title").innerText = data.title;
-      document.getElementById("plot").innerText = data.description;
-      trailerId = data.imdb_id;
-      reviewId = data.imdb_id;
+      console.log(data);
+      document.getElementById("title").innerText = data.Title;
+      document.getElementById("plot").innerText = data.Plot;
+      movieTitle = data.Title;
+      reviewId = data.imdbID;
     })
     .catch((err) => {
       alert("Lỗi ở info(n)");
@@ -27,7 +31,9 @@ function info(n) {
 }
 
 function changeBackground(n) {
-  fetch(`https://www.omdbapi.com/?i=${n}&apikey=48b12622`, {
+  const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+  const targetUrl = `http://www.omdbapi.com/?i=${n}&apikey=48b12622`;
+  fetch(proxyUrl + targetUrl, {
     method: "GET",
     mode: "cors",
     headers: { "Content-Type": "application/json" },
@@ -36,7 +42,7 @@ function changeBackground(n) {
       return response.json();
     })
     .then((data) => {
-      document.getElementById("bg").src = data.fanart;
+      document.getElementById("bg").src = data.Poster;
     })
     .catch((err) => {
       alert("Lỗi ở changeBackground(n)");
@@ -101,8 +107,14 @@ window.onload = function () {
   localStorage.setItem("movieId", tempId);
 };
 
+function convertToSearchString(title) {
+  // Trim the title, replace spaces with '+', and append 'trailer'
+  return title.trim().replace(/\s+/g, "+") + "+trailer";
+}
+
 function trailer() {
-  window.open(`https://www.youtube.com/watch?v=${trailerId}`);
+  const searchString = convertToSearchString(movieTitle);
+  window.open(`https://www.youtube.com/results?search_query=${searchString}`);
 }
 function review() {
   window.open(`https://www.imdb.com/title/${reviewId}`);
