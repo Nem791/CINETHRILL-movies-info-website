@@ -7,7 +7,7 @@ let movieAPI = "../db.json";
 let trailerId;
 let reviewId;
 function info(n) {
-  fetch(`http://www.omdbapi.com/?i=${n}&apikey=48b12622`, {
+  fetch(`https://www.omdbapi.com/?i=${n}&apikey=48b12622`, {
     method: "GET",
     mode: "cors",
     headers: { "Content-Type": "application/json" },
@@ -27,7 +27,7 @@ function info(n) {
 }
 
 function changeBackground(n) {
-  fetch(`http://www.omdbapi.com/?i=${n}&apikey=48b12622`, {
+  fetch(`https://www.omdbapi.com/?i=${n}&apikey=48b12622`, {
     method: "GET",
     mode: "cors",
     headers: { "Content-Type": "application/json" },
