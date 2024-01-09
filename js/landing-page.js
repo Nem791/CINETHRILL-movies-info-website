@@ -26,7 +26,7 @@ function info(n) {
       reviewId = data.imdbID;
     })
     .catch((err) => {
-      alert("Lỗi ở info(n)");
+      alert("Lỗi ở info (n)");
     });
 }
 
