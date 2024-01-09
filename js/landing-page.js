@@ -8,7 +8,7 @@ let movieTitle;
 let reviewId;
 
 function info(n) {
-  const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+  const proxyUrl = "https://free-proxy.fly.dev/";
   const targetUrl = `http://www.omdbapi.com/?i=${n}&apikey=48b12622`;
   fetch(proxyUrl + targetUrl, {
     method: "GET",
@@ -31,7 +31,7 @@ function info(n) {
 }
 
 function changeBackground(n) {
-  const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+  const proxyUrl = "https://free-proxy.fly.dev/";
   const targetUrl = `http://www.omdbapi.com/?i=${n}&apikey=48b12622`;
   fetch(proxyUrl + targetUrl, {
     method: "GET",
@@ -45,6 +45,7 @@ function changeBackground(n) {
       document.getElementById("bg").src = data.Poster;
     })
     .catch((err) => {
+      console.log(err);
       alert("Lỗi ở changeBackground(n)");
     });
 }
